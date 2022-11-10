@@ -20,17 +20,21 @@ public class SelTest {
     void fillFormTest(){
         String name = "Alex";
         open("/text-box");
-
+        /*
         $("[id=userName]").setValue(name);
         $("[id=userEmail]").setValue("alex@test.com");
         $("[id=currentAddress]").setValue("Street 1");
         $("[id=permanentAddress]").setValue("Street 2");
         $("[id=submit]").click();
-
         $("[id=output]").shouldHave(text(name), text("Street 1"));
-
         $("[id=output] [id=name]").shouldHave(text(name));
         $("[id=output]").$("[id=name]").shouldHave(text(name));
+         */
+        $("#dateOfBirthInput").click();
+        $(".react-datepicker__month-select").selectOption("July");
+        $(".react-datepicker__year-select").selectOption("2008");
+        $(".react-datepicker__day--030:not(.react-datepicker__day--outside-month)").click();
+
 
 
 
