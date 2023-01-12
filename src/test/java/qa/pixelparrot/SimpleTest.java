@@ -4,8 +4,14 @@ import com.codeborne.selenide.Selenide;
 import com.codeborne.selenide.WebDriverRunner;
 import org.junit.jupiter.api.*;
 
+
+
+
+    @DisplayName("Auto class")
+
 public class SimpleTest {
 
+    @DisplayName("Ato test")
     @BeforeAll
     static void initDB(){
         System.out.println("### @BeforeAll");
@@ -38,6 +44,8 @@ public class SimpleTest {
         Assertions.assertTrue(true);
     }
 
+    @Disabled ("Номер бага")
+    //Тесты которые не пихаем в прогон, закидываем через дизабле
     @Test
     void jan12(){
         Assertions.assertTrue(3>2);
