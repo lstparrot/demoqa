@@ -38,4 +38,14 @@ public class SimpleTest {
         Assertions.assertTrue(true);
     }
 
+    @Test
+    void jan12(){
+        Assertions.assertTrue(3>2);
+        Assertions.assertAll(
+                () -> Assertions.assertTrue(3>2),
+                () -> Assertions.assertTrue(3>2)
+        );
+    }
+
+
 }
